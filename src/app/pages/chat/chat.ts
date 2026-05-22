@@ -65,7 +65,7 @@ export class Chat implements OnInit, OnDestroy {
 
     // ================= CONTACTS =================
     loadContacts() {
-        this.http.get<any[]>('https://backend-2a4l.onrender.com/api/messages/contacts').subscribe({
+        this.http.get<any[]>('https://backend-6fko.onrender.com/api/messages/contacts').subscribe({
             next: (users) => {
                 const mapped: ChatContact[] = users.map(u => ({
                     id: u.email,
@@ -91,7 +91,7 @@ export class Chat implements OnInit, OnDestroy {
     loadHistory(contact: ChatContact, scroll = true) {
         if (contact.id === 'ai-bot') return;
 
-        this.http.get<any[]>(`https://backend-2a4l.onrender.com/api/messages/history/${contact.id}`).subscribe({
+        this.http.get<any[]>(`https://backend-6fko.onrender.com/api/messages/history/${contact.id}`).subscribe({
             next: (msgs) => {
                 contact.messages = msgs.map(m => ({
                     id: m.id,
@@ -158,7 +158,7 @@ export class Chat implements OnInit, OnDestroy {
             content: text
         };
 
-        this.http.post<any>('https://backend-2a4l.onrender.com/api/messages', payload).subscribe({
+        this.http.post<any>('https://backend-6fko.onrender.com/api/messages', payload).subscribe({
             next: (m) => {
                 active.messages.push({
                     id: m.id,

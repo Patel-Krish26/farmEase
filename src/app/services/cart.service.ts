@@ -15,7 +15,7 @@ export interface CartItem {
 @Injectable({ providedIn: 'root' })
 export class CartService {
   private http = inject(HttpClient);
-  private backendUrl = 'https://backend-2a4l.onrender.com/api/cart';
+  private backendUrl = 'https://backend-6fko.onrender.com/api/cart';
 
   private _items = signal<CartItem[]>([]);
 

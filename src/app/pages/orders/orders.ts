@@ -29,7 +29,7 @@ export interface OrderDto {
 })
 export class OrdersComponent implements OnInit {
   private http = inject(HttpClient);
-  private backendUrl = 'https://backend-2a4l.onrender.com/api/orders';
+  private backendUrl = 'https://backend-6fko.onrender.com/api/orders';
 
   orders: OrderDto[] = [];
   activeFilter: string = 'All';

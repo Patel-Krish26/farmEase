@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AgriItem } from '../models/agri-item.model';
 
-const API_BASE = 'https://backend-2a4l.onrender.com/api/agriitems';
+const API_BASE = 'https://backend-6fko.onrender.com/api/agriitems';
 
 @Injectable({ providedIn: 'root' })
 export class AgriItemService {

@@ -53,7 +53,7 @@ export class Signup implements OnInit {
 
   private fb = inject(FormBuilder);
 
-  private backendUrl = 'https://backend-2a4l.onrender.com/api/auth';
+  private backendUrl = 'https://backend-6fko.onrender.com/api/auth';
 
   // State Management
   selectedRole: UserRole = 'customer';

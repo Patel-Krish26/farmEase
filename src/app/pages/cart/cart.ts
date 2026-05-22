@@ -43,7 +43,7 @@ export class Cart implements OnInit {
     if (this.cartService.count() === 0) return;
     const total = this.finalTotal;
     
-    this.http.post('https://backend-2a4l.onrender.com/api/orders', { checkoutFromCart: true }).subscribe({
+    this.http.post('https://backend-6fko.onrender.com/api/orders', { checkoutFromCart: true }).subscribe({
       next: () => {
         this.cartService.clearLocalCart();
         this.notify(`✅ Order placed! Total ₹${total.toLocaleString('en-IN')} — Thank you!`);

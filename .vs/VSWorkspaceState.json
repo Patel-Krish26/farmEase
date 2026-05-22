@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\pages",
-    "\\src\\app\\pages\\admin",
     "\\src\\app\\pages\\signup",
     "\\src\\app\\pages\\wishlist",
+    "\\src\\app\\services",
     "\\src\\app\\shared",
     "\\src\\app\\shared\\navbar",
     "\\src\\app\\shared\\navbar\\nav.component"
   ],
-  "SelectedNode": "\\src\\app\\pages\\wishlist\\wishlist.html",
+  "SelectedNode": "\\src\\app\\services\\agri-item.service.ts",
   "PreviewInSolutionExplorer": false
 }

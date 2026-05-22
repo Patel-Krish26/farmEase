@@ -36,7 +36,7 @@ export class Profile implements OnInit {
 
     // ✅ Load user
     private loadCurrentUser(): void {
-        this.http.get<any>('https://backend-2a4l.onrender.com/api/Users/me').subscribe({
+        this.http.get<any>('https://backend-6fko.onrender.com/api/Users/me').subscribe({
             next: (user) => {
                 this.currentUser.set(this.normalizeUserData(user));
             },
@@ -104,7 +104,7 @@ export class Profile implements OnInit {
             birthDate: this.editForm.dob || ''
         };
 
-        this.http.put(`https://backend-2a4l.onrender.com/api/Users/${user.id}`, updatedUser).subscribe({
+        this.http.put(`https://backend-6fko.onrender.com/api/Users/${user.id}`, updatedUser).subscribe({
             next: () => {
                 this.currentUser.set(updatedUser);
                 this.finalizeSave();

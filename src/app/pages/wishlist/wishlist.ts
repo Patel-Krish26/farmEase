@@ -19,7 +19,7 @@ export interface WishlistItem {
 @Injectable({ providedIn: 'root' })
 export class WishlistService {
   private http = inject(HttpClient);
-  private backendUrl = 'https://backend-2a4l.onrender.com/api/wishlist';
+  private backendUrl = 'https://backend-6fko.onrender.com/api/wishlist';
 
   private _items = signal<WishlistItem[]>([]);
   readonly items = this._items.asReadonly();

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
 
-const API_BASE = 'https://backend-2a4l.onrender.com/api/users';
+const API_BASE = 'https://backend-6fko.onrender.com/api/users';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {

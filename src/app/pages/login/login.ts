@@ -38,7 +38,7 @@ export class Login {
       return;
     }
 
-    const backendUrl = 'https://backend-2a4l.onrender.com/api/auth';
+    const backendUrl = 'https://backend-6fko.onrender.com/api/auth';
 
     this.http.post(`${backendUrl}/login`, { email, password }).subscribe({
       next: (foundUser: any) => {

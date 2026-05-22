@@ -89,7 +89,7 @@ export class Admin implements OnInit {
   // ================= INJECT =================
   private router = inject(Router);
   private http = inject(HttpClient);
-  private backendUrl = 'https://backend-2a4l.onrender.com/api';
+  private backendUrl = 'https://backend-6fko.onrender.com/api';
 
   constructor(public auth: AuthService) { }
 

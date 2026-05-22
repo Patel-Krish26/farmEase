@@ -39,8 +39,8 @@ export class Products implements OnInit {
     this.products.set([]);
 
     forkJoin({
-      machinery: this.http.get<any[]>('https://backend-2a4l.onrender.com/api/machinery'),
-      agriitems: this.http.get<any[]>('https://backend-2a4l.onrender.com/api/agriitems')
+      machinery: this.http.get<any[]>('https://backend-6fko.onrender.com/api/machinery'),
+      agriitems: this.http.get<any[]>('https://backend-6fko.onrender.com/api/agriitems')
     }).subscribe({
       next: (res) => {
         const allItems = [...res.machinery, ...res.agriitems];

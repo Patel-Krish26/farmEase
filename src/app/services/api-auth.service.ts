@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthResponse, LoginDto, RegisterDto } from '../models/auth.model';
 
-const API_BASE = 'https://backend-2a4l.onrender.com/api/auth'; 
+const API_BASE = 'https://backend-6fko.onrender.com/api/auth'; 
 
 @Injectable({ providedIn: 'root' })
 export class ApiAuthService {

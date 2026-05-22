@@ -41,7 +41,7 @@ export class AddProduct {
     
     this.isLoading = true;
     
-    this.http.post('https://backend-2a4l.onrender.com/api/agriitems', this.product).subscribe({
+    this.http.post('https://backend-6fko.onrender.com/api/agriitems', this.product).subscribe({
       next: (res) => {
         this.isLoading = false;
         this.triggerToast('✅ Product added successfully!');
