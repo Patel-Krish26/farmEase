@@ -1,0 +1,98 @@
+<div class="contact-page mesh-bg">
+  <div class="contact-container">
+    
+    <!-- Hero Section -->
+    <div class="contact-hero anim-fade-up">
+      <div class="section-label">Get in Touch</div>
+      <h1 class="page-title">We're Here to <span>Help You Grow</span></h1>
+      <p class="page-desc">Whether you have questions about an order or need farming advice, reach out to our team instantly across multiple channels.</p>
+    </div>
+
+    <!-- Contact Channels -->
+    <div class="contact-grid anim-fade-up delay-2">
+
+      <!-- WhatsApp -->
+      <a [href]="getWhatsAppLink()" target="_blank" class="contact-card card-wa">
+        <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3>WhatsApp</h3>
+        <p>Chat with our support team instantly.</p>
+        <span class="action-text">Message Now <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <!-- Phone -->
+      <a [href]="getPhoneLink()" class="contact-card card-call">
+        <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
+        <h3>Phone Call</h3>
+        <p>Speak directly with an agricultural expert.</p>
+        <span class="action-text">Call Now <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a [href]="getTelegramSupport()" target="_blank" class="contact-card card-tele">
+        <div class="card-icon "><i class="fa-brands fa-telegram"></i></div>
+        <h3>Telegram</h3>
+        <p>Chat with our support team instantly.</p>
+        <span class="action-text">Message Now <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <!-- Email -->
+      <a [href]="getMailLink()" class="contact-card card-mail">
+        <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h3>Email Support</h3>
+        <p>Send us your detailed inquiries.</p>
+        <span class="action-text">Write to Us <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+
+    </div>
+
+    <!-- Bottom Section: Form & Info -->
+    <div class="contact-bottom-row anim-fade-up delay-4">
+      
+      <!-- Quick Message Form -->
+      <form class="contact-form glass-card" (submit)="submitMessage($event)">
+        <h3>Send a Direct Message</h3>
+        <div class="form-floating-dark">
+          <label>Your Name</label>
+          <input type="text" placeholder="John Doe" required>
+        </div>
+        <div class="form-floating-dark">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-floating-dark">
+          <label>How can we help?</label>
+          <textarea rows="4" placeholder="Describe your issue or question..." required></textarea>
+        </div>
+        <button type="submit" class="btn-glow w-100 mt-2">
+          <i class="fa-regular fa-paper-plane me-2"></i>Send Message
+        </button>
+      </form>
+
+      <!-- Location Info -->
+      <div class="contact-info glass-card">
+        <h3>Our Headquarters</h3>
+        <div class="info-block">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h4>FarmEase Tech Hub</h4>
+            <p>123 Green Valley Road,<br>Agricultural District, MH 411001<br>India</p>
+          </div>
+        </div>
+        <div class="info-block mt-4">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <h4>Operating Hours</h4>
+            <p>Mon - Sat: 8:00 AM - 8:00 PM<br>Sun: Closed (Field Day!)</p>
+          </div>
+        </div>
+        
+        <!-- Animated Map Placeholder -->
+        <div class="map-placeholder mt-4">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Interactive Map (Mock)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

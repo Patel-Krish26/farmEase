@@ -1,0 +1,102 @@
+<div class="wishlist-page mesh-bg">
+
+  <!-- ── Toast Notification ── -->
+  <div class="toast-notification" [class.show]="showToast">
+    {{ toastMessage }}
+  </div>
+
+  <!-- Hero -->
+  <div class="wishlist-hero">
+    <div class="wishlist-hero-content anim-fade-up">
+      <div class="section-label">Saved Items</div>
+      <h1 class="section-title">My <span>Wishlist</span></h1>
+      <p class="hero-sub" *ngIf="wishlistItems().length > 0">
+        {{ wishlistItems().length }} item{{ wishlistItems().length > 1 ? 's' : '' }} saved · Total value ₹{{ totalValue() | number }}
+      </p>
+      <p class="hero-sub" *ngIf="wishlistItems().length === 0">
+        Save products you love by clicking the heart icon on any product.
+      </p>
+    </div>
+  </div>
+
+  <div class="wishlist-container">
+
+    <!-- Empty State -->
+    <div *ngIf="wishlistItems().length === 0" class="cart-empty anim-fade-in">
+      <div class="empty-icon-wrap">
+        <i class="fa-solid fa-heart"></i>
+        <div class="empty-ring"></div>
+      </div>
+      <h2>Your wishlist is empty</h2>
+      <p>Discover premium seeds, fertilizers, and farm equipment.</p>
+      <a routerLink="/Products" class="btn-glow"
+         style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:50px;">
+        <i class="fa-solid fa-seedling"></i> Discover Products
+      </a>
+    </div>
+
+    <!-- Wishlist Content -->
+    <div *ngIf="wishlistItems().length > 0" class="wishlist-layout anim-fade-up">
+
+      <!-- Item List -->
+      <div class="wishlist-items-panel">
+        <div class="panel-header">
+          <span>{{ wishlistItems().length }} saved item{{ wishlistItems().length > 1 ? 's' : '' }}</span>
+          <span style="color: #22c55e; font-size: 0.8rem; font-weight: 600;">
+            Total Value: ₹{{ totalValue() | number }}
+          </span>
+        </div>
+
+        <div class="wishlist-item" *ngFor="let item of wishlistItems(); trackBy: trackById">
+          <div class="wishlist-img">
+            <img [src]="item.imageUrl || 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=200'"
+                 [alt]="item.name">
+            <div class="stock-badge" [class.out-stock]="!item.inStock">
+              {{ item.inStock ? 'In Stock' : 'Out of Stock' }}
+            </div>
+          </div>
+          <div class="wishlist-item-info">
+            <div class="cart-item-cat">{{ item.category }}</div>
+            <div class="cart-item-name">{{ item.name }}</div>
+            <div class="wishlist-price">₹{{ item.price | number }}</div>
+          </div>
+          <div class="wishlist-item-actions">
+            <button class="btn-glow move-btn" (click)="moveToCart(item)" [disabled]="!item.inStock">
+              <i class="fa-solid fa-cart-plus me-1"></i>
+              {{ item.inStock ? 'Move to Cart' : 'Out of Stock' }}
+            </button>
+            <button class="remove-btn" (click)="removeItem(item.id)" title="Remove from wishlist">
+              <i class="fa-solid fa-heart-crack"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wishlist Summary -->
+      <div class="wishlist-summary-panel">
+        <div class="summary-title">Wishlist Summary</div>
+        <div class="summary-row">
+          <span>Items saved</span>
+          <span>{{ wishlistItems().length }}</span>
+        </div>
+        <div class="summary-row">
+          <span>Total value</span>
+          <span style="color: #22c55e; font-weight: 600;">₹{{ totalValue() | number }}</span>
+        </div>
+        <div class="summary-row">
+          <span>In stock</span>
+          <span class="discount-val">{{ inStockCount() }} items</span>
+        </div>
+        <div class="summary-divider"></div>
+
+        <button class="btn-glow w-100 move-all-btn" (click)="moveAllToCart()" [disabled]="inStockCount() === 0">
+          <i class="fa-solid fa-cart-shopping me-2"></i>Move All to Cart
+        </button>
+
+        <a routerLink="/Products" class="btn-glass w-100" style="display:flex;justify-content:center;padding:12px;border-radius:12px;margin-top:10px;">
+          <i class="fa-solid fa-seedling me-2"></i>Continue Shopping
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

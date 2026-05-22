@@ -1,0 +1,125 @@
+<div class="orders-page mesh-bg">
+
+  <!-- ── Toast Notification ── -->
+  <div class="toast-notification" [class.show]="showToast">{{ toastMessage }}</div>
+
+  <!-- Hero -->
+  <div class="orders-hero">
+    <div class="orders-hero-content anim-fade-up">
+      <div class="section-label">History</div>
+      <h1 class="section-title">Purchase <span>History</span></h1>
+      <p class="hero-sub" *ngIf="orders.length > 0">
+        {{ orders.length }} order{{ orders.length > 1 ? 's' : '' }} placed
+      </p>
+      <p class="hero-sub" *ngIf="orders.length === 0">
+        Your purchase history will appear here once you place your first order.
+      </p>
+    </div>
+  </div>
+
+  <div class="orders-container">
+
+    <!-- Empty -->
+    <div *ngIf="orders.length === 0" class="cart-empty anim-fade-in">
+      <div class="empty-icon-wrap">
+        <i class="fa-solid fa-receipt"></i>
+        <div class="empty-ring"></div>
+      </div>
+      <h2>No orders yet</h2>
+      <p>Your purchase history will appear here once you place your first order.</p>
+      <a routerLink="/Products" class="btn-glow"
+         style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:50px;">
+        <i class="fa-solid fa-seedling"></i> Start Shopping
+      </a>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div *ngIf="orders.length > 0" class="orders-tabs anim-fade-up">
+      <button class="orders-tab" [class.active]="activeFilter === 'All'" (click)="setFilter('All')">
+        All Orders <span class="tab-count">{{ orders.length }}</span>
+      </button>
+      <button class="orders-tab" [class.active]="activeFilter === 'Delivered'" (click)="setFilter('Delivered')">
+        Delivered
+      </button>
+      <button class="orders-tab" [class.active]="activeFilter === 'Processing'" (click)="setFilter('Processing')">
+        Processing
+      </button>
+      <button class="orders-tab" [class.active]="activeFilter === 'Shipped'" (click)="setFilter('Shipped')">
+        Shipped
+      </button>
+    </div>
+
+    <!-- Order List -->
+    <div *ngIf="filteredOrders.length > 0" class="orders-list anim-fade-up">
+      <div class="order-card" *ngFor="let order of filteredOrders">
+
+        <!-- Order Header -->
+        <div class="order-header">
+          <div class="order-id-row">
+            <div class="order-icon"><i class="fa-solid fa-receipt"></i></div>
+            <div>
+              <div class="order-id">Order #{{ order.id }}</div>
+              <div class="order-date"><i class="fa-regular fa-calendar me-1"></i>{{ order.orderDate | date }}</div>
+            </div>
+          </div>
+          <div class="order-status" [style.color]="statusColor(order.status)"
+               [style.background]="statusColor(order.status) + '18'"
+               [style.border-color]="statusColor(order.status) + '33'">
+            <i class="fa-solid me-2" [class]="statusIcon(order.status)"></i>{{ order.status }}
+          </div>
+        </div>
+
+        <!-- Items -->
+        <div class="order-items">
+          <div class="order-item" *ngFor="let item of order.items">
+            <img [src]="item.imageUrl" [alt]="item.productName" class="order-item-img">
+            <div class="order-item-info">
+              <div class="order-item-name">{{ item.productName }}</div>
+              <div class="order-item-meta">Qty: {{ item.quantity }} × ₹{{ item.price | number }}</div>
+            </div>
+            <div class="order-item-total">₹{{ (item.quantity * item.price) | number }}</div>
+          </div>
+        </div>
+
+        <!-- Order Footer -->
+        <div class="order-footer">
+          <div>
+            <div class="order-total-label">Order Total <span>(incl. ₹99 shipping)</span></div>
+            <div class="order-total-val">₹{{ order.totalAmount | number }}</div>
+          </div>
+          <div class="order-actions">
+            <button class="btn-glass order-action-btn" *ngIf="order.status === 'Delivered'" (click)="reorder(order)">
+              <i class="fa-solid fa-rotate-left me-1"></i>Reorder
+            </button>
+            <button class="btn-glass order-action-btn" (click)="downloadInvoice(order)">
+              <i class="fa-solid fa-file-invoice me-1"></i>Invoice
+            </button>
+            <button class="btn-danger-glass order-action-btn" *ngIf="order.status === 'Processing'" (click)="cancelOrder(order)">
+              <i class="fa-solid fa-xmark me-1"></i>Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No results for filter -->
+    <div *ngIf="filteredOrders.length === 0 && orders.length > 0" class="cart-empty anim-fade-in">
+      <div class="empty-icon-wrap">
+        <i class="fa-solid fa-filter"></i>
+        <div class="empty-ring"></div>
+      </div>
+      <h2>No {{ activeFilter }} orders</h2>
+      <p>No orders match this filter. Try a different category.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="orders-nav anim-fade-up">
+      <a routerLink="/Products" class="btn-outline-glow">
+        <i class="fa-solid fa-seedling me-2"></i>Shop More
+      </a>
+      <a routerLink="/Cart" class="btn-glass">
+        <i class="fa-solid fa-cart-shopping me-2"></i>View Cart
+      </a>
+    </div>
+  </div>
+</div>

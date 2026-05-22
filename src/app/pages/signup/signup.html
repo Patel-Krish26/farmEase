@@ -1,0 +1,240 @@
+<div class="auth-page">
+  <div class="auth-visual">
+    <div class="auth-visual-bg">
+      <div class="particles">
+        <div class="particle" *ngFor="let p of [1,2,3,4,5,6]"></div>
+      </div>
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring orbit-ring-2"></div>
+    </div>
+
+    <div class="auth-visual-content">
+      <div class="floating-cards">
+        <div class="feat-card anim-slide-left delay-1">
+          <div class="feat-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div>
+            <div class="feat-title">Farmer Network</div>
+            <div class="feat-sub">2,400+ verified farmers</div>
+          </div>
+        </div>
+        <div class="feat-card anim-slide-left delay-3">
+          <div class="feat-icon amber"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <div class="feat-title">Secure & Private</div>
+            <div class="feat-sub">End-to-end encrypted</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-visual-text anim-fade-up delay-4">
+        <div class="section-label">Join the Harvest</div>
+        <h2 class="section-title" style="font-size:2.2rem;color:#f0fdf4;">
+          Start Your Smart<br><span>Farming Journey</span>
+        </h2>
+        <div class="auth-stats anim-fade-up delay-6">
+          <div class="auth-stat"><div class="auth-stat-n">Free</div><div class="auth-stat-l">Forever</div></div>
+          <div class="auth-stat-divider"></div>
+          <div class="auth-stat"><div class="auth-stat-n">24/7</div><div class="auth-stat-l">Support</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-form-panel signup-panel">
+    <div class="auth-form-card anim-slide-right">
+      <div class="auth-form-header anim-fade-down delay-1">
+        <div class="brand-icon"><i class="fa-solid fa-leaf"></i></div>
+        <div class="auth-form-badge">New Member</div>
+      </div>
+
+      <h1 class="auth-title anim-fade-up delay-2">Create Account</h1>
+      <p class="auth-sub anim-fade-up delay-3">Select your role and fill in your details.</p>
+
+      <div class="role-tabs anim-fade-up delay-3">
+        <div class="role-tab" [class.active]="selectedRole === 'customer'" (click)="setRole('customer')">
+          <i class="fa-solid fa-user"></i> Customer
+        </div>
+        <div class="role-tab" [class.active]="selectedRole === 'farmer'" (click)="setRole('farmer')">
+          <i class="fa-solid fa-wheat-awn"></i> Farmer
+        </div>
+
+      </div>
+
+      <form class="signup-form" [formGroup]="signupForm">
+
+        <div class="form-row-2">
+          <div class="form-floating-dark anim-fade-up delay-4">
+            <label>Full Name *</label>
+
+            <input type="text"
+                   placeholder="John Doe"
+                   formControlName="fullName">
+
+            <small class="error" *ngIf="f['fullName'].touched && f['fullName'].invalid">
+
+              <span *ngIf="f['fullName'].errors?.['required']">
+                Full name is required
+              </span>
+
+              <span *ngIf="f['fullName'].errors?.['minlength']">
+                Minimum 3 characters
+              </span>
+
+              <span *ngIf="f['fullName'].errors?.['pattern']">
+                Only letters allowed
+              </span>
+
+            </small>
+          </div>
+
+          <div class="form-floating-dark anim-fade-up delay-4">
+            <label>Email Address *</label>
+
+            <input type="email"
+                   placeholder="you@example.com"
+                   formControlName="email">
+
+            <small class="error" *ngIf="f['email'].touched && f['email'].invalid">
+
+              <span *ngIf="f['email'].errors?.['required']">
+                Email is required
+              </span>
+
+              <span *ngIf="f['email'].errors?.['pattern']">
+                Enter valid email address
+              </span>
+
+            </small>
+          </div>
+
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-floating-dark anim-fade-up delay-5">
+            <label>Phone *</label>
+
+            <input type="tel"
+                   placeholder="xxxxxxxxxx"
+                   formControlName="phone"
+                   maxlength="10">
+
+            <small class="error" *ngIf="f['phone'].touched && f['phone'].invalid">
+
+              <span *ngIf="f['phone'].errors?.['required']">
+                Phone number required
+              </span>
+
+              <span *ngIf="f['phone'].errors?.['pattern']">
+                Enter valid 10-digit Indian mobile number
+              </span>
+
+            </small>
+          </div>
+
+          <div class="form-floating-dark anim-fade-up delay-5">
+            <label>Date of Birth *</label>
+
+            <input type="date"
+                   formControlName="birthDate">
+
+            <small class="error"
+                   *ngIf="f['birthDate'].touched && f['birthDate'].invalid">
+
+              <span *ngIf="f['birthDate'].errors?.['required']">
+                Date of birth required
+              </span>
+
+              <span *ngIf="f['birthDate'].errors?.['underAge']">
+                Minimum age must be 18
+              </span>
+
+            </small>
+          </div>
+
+        </div>
+
+        <div class="form-floating-dark anim-fade-up delay-6">
+
+          <label>Address / Farm Location *</label>
+
+          <input type="text"
+                 placeholder="Village, State, Zip"
+                 formControlName="address">
+
+          <small class="error"
+                 *ngIf="f['address'].touched && f['address'].invalid">
+
+            <span *ngIf="f['address'].errors?.['required']">
+              Address is required
+            </span>
+
+            <span *ngIf="f['address'].errors?.['minlength']">
+              Address too short
+            </span>
+
+          </small>
+
+        </div>
+
+
+        <div class="form-floating-dark anim-fade-up delay-7">
+
+          <label>Bio / Farm Details</label>
+
+          <textarea rows="2"
+                    placeholder="Briefly describe your farm..."
+                    formControlName="bio"></textarea>
+
+          <small class="error"
+                 *ngIf="f['bio'].touched && f['bio'].invalid">
+
+            <span *ngIf="f['bio'].errors?.['maxlength']">
+              Maximum 300 characters allowed
+            </span>
+
+          </small>
+
+        </div>
+
+        <div class="form-floating-dark anim-fade-up delay-7">
+          <label>Password *</label>
+
+          <input type="password"
+                 placeholder="••••••••"
+                 formControlName="password">
+
+          <small class="error"
+                 *ngIf="f['password'].touched && f['password'].invalid">
+
+            <span *ngIf="f['password'].errors?.['required']">
+              Password required
+            </span>
+
+            <span *ngIf="f['password'].errors?.['minlength']">
+              Minimum 6 characters
+            </span>
+
+            <span *ngIf="f['password'].errors?.['pattern']">
+              Must contain:
+              uppercase, lowercase, number & special character
+            </span>
+
+          </small>
+        </div>
+
+        <button type="button"
+                class="btn-glow w-100 auth-submit anim-fade-up delay-8"
+                [disabled]="signupForm.invalid || isLoading"
+                (click)="onRegister()">
+          <i *ngIf="!isLoading" class="fa-solid fa-seedling me-2"></i>
+          <i *ngIf="isLoading" class="fa-solid fa-circle-notch fa-spin me-2"></i>
+          {{ isLoading ? 'Creating Account...' : 'Complete Registration' }}
+        </button>
+
+        <p class="auth-switch anim-fade-up delay-8">
+          Already a member? <a routerLink="/Login">Sign In <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

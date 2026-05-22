@@ -1,0 +1,96 @@
+<div class="orders-wrapper py-5 mt-5 bg-light-subtle min-vh-100">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5 animate-fade-in">
+      <div>
+        <h2 class="fw-bold text-dark mb-1">
+          <i class="fa-solid fa-boxes-packing text-success me-2"></i>My Orders
+        </h2>
+        <p class="text-muted mb-0">Manage and track your agricultural supplies</p>
+      </div>
+      <button class="btn btn-success rounded-pill px-4 shadow-sm mt-3 mt-md-0 btn-hover-grow" routerLink="/Products">
+        <i class="fa-solid fa-plus me-2"></i>New Purchase
+      </button>
+    </div>
+
+    <div class="row g-4" *ngIf="orders.length > 0; else noOrders">
+      <div class="col-12 animate-slide-up" *ngFor="let order of orders">
+        <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden order-card transition-all">
+          
+          <div class="card-header bg-white border-bottom border-light py-4 px-4">
+            <div class="row align-items-center g-3">
+              <div class="col-6 col-md-3">
+                <small class="text-uppercase text-muted fw-bold ls-1 d-block mb-1" style="font-size: 0.7rem;">Order Placed</small>
+                <span class="fw-bold text-dark">{{ order.date }}</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <small class="text-uppercase text-muted fw-bold ls-1 d-block mb-1" style="font-size: 0.7rem;">Total Amount</small>
+                <span class="fw-bold text-dark">₹{{ order.total | number }}</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <small class="text-uppercase text-muted fw-bold ls-1 d-block mb-1" style="font-size: 0.7rem;">Order ID</small>
+                <span class="text-success fw-bold">#{{ order.id }}</span>
+              </div>
+              <div class="col-6 col-md-3 text-md-end">
+                <span class="badge rounded-pill px-3 py-2 border shadow-none" [ngClass]="getStatusClass(order.status)">
+                  <i class="fa-solid fa-circle me-1 small"></i> {{ order.status }}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body p-4 bg-white">
+            <div class="row align-items-center">
+              <div class="col-md-8 border-end-md">
+                <div class="order-items-list">
+                  <div *ngFor="let item of order.items" class="d-flex align-items-center gap-3 py-2 border-bottom-dashed last-child-no-border">
+                    <div class="icon-square bg-success bg-opacity-10 text-success rounded-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                      <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-0 fw-bold text-dark">{{ item.name }}</h6>
+                      <small class="text-muted">Quantity: <span class="fw-semibold">{{ item.qty }}</span></small>
+                    </div>
+                    <div class="text-end">
+                      <span class="fw-bold text-dark">₹{{ item.price | number }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 text-md-center mt-4 mt-md-0 px-md-4">
+                <div class="d-grid gap-2">
+                  <button class="btn btn-success rounded-pill py-2 fw-bold shadow-sm">
+                    <i class="fa-solid fa-location-dot me-2"></i>Track Order
+                  </button>
+                  <button class="btn btn-outline-dark border-light-subtle bg-light bg-opacity-50 rounded-pill py-2 fw-semibold">
+                    <i class="fa-solid fa-file-invoice me-2"></i>Download Invoice
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer bg-light bg-opacity-50 border-0 px-4 py-2">
+            <small class="text-muted fst-italic">
+              <i class="fa-solid fa-info-circle me-1"></i> 
+              Shipping via FarmEase Express Logistics
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noOrders>
+      <div class="text-center py-5 animate-fade-in">
+        <div class="mb-4 d-inline-block p-4 bg-white rounded-circle shadow-sm">
+          <i class="fa-solid fa-receipt text-success opacity-25" style="font-size: 6rem;"></i>
+        </div>
+        <h3 class="fw-bold text-dark">No orders found</h3>
+        <p class="text-muted fs-5">Your field is ready, but your basket is empty.<br>Start growing with our premium supplies.</p>
+        <button routerLink="/Products" class="btn btn-success btn-lg rounded-pill px-5 py-3 mt-3 shadow-lg fw-bold">
+          Explore Seed Store
+        </button>
+      </div>
+    </ng-template>
+  </div>
+</div>

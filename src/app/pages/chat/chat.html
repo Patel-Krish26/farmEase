@@ -1,0 +1,135 @@
+<div class="chat-page mesh-bg">
+  <div class="chat-container">
+
+    <!-- ================= SIDEBAR ================= -->
+    <div class="chat-sidebar">
+      <div class="sidebar-header">
+        <h2>Messages</h2>
+      </div>
+
+      <div class="search-bar">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" placeholder="Search or start new chat">
+      </div>
+
+      <div class="contact-list">
+        <div *ngFor="let contact of contacts()"
+             class="contact-item"
+             [class.active]="activeContact()?.id === contact.id"
+             (click)="selectContact(contact)">
+
+          <div class="avatar-wrapper">
+            <img [src]="contact.avatar" alt="">
+            <div class="status-indicator" [class.online]="contact.online"></div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-top">
+              <span class="contact-name">{{ contact.name }}</span>
+
+              <span class="time-meta" *ngIf="contact.messages.length">
+                {{ contact.messages[contact.messages.length - 1].time }}
+              </span>
+            </div>
+
+            <div class="contact-preview" *ngIf="contact.messages.length">
+              <span *ngIf="contact.messages.at(-1)?.sender === 'me'">
+                <i class="fa-solid fa-check-double text-primary me-1"></i>
+              </span>
+              {{ contact.messages.at(-1)?.text }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MAIN CHAT ================= -->
+    <div class="chat-main" *ngIf="activeContact() as active; else noChat">
+
+      <!-- Header -->
+      <div class="chat-header">
+        <div class="header-contact-info">
+          <img [src]="active.avatar" class="header-avatar">
+          <div>
+            <h3 class="header-name">{{ active.name }}</h3>
+            <span class="header-status">
+              {{ active.online ? 'Online' : 'Offline' }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="chat-messages-area" #chatScroll>
+
+        <!-- ✅ If messages exist -->
+        <ng-container *ngIf="active.messages.length > 0; else noMessages">
+
+          <ng-container *ngFor="let msg of active.messages">
+            <div class="message-wrapper anim-fade-up"
+                 [ngClass]="msg.sender === 'me' ? 'msg-sent' : 'msg-received'">
+
+              <div class="message-bubble">
+                <p>{{ msg.text }}</p>
+                <span class="message-time">
+                  {{ msg.time }}
+                  <i *ngIf="msg.sender === 'me'" class="fa-solid fa-check-double ms-1"></i>
+                </span>
+              </div>
+            </div>
+          </ng-container>
+
+        </ng-container>
+
+        <!-- ❌ No messages -->
+        <ng-template #noMessages>
+          <div class="empty-chat genz-empty">
+            <div class="emoji-bounce">💬</div>
+            <h1 class="genz-title">Welcome to FarmEase</h1>
+            <p class="genz-sub">Start a conversation to grow your network 🚀</p>
+          </div>
+        </ng-template>
+
+        <!-- Typing indicator -->
+        <div class="message-wrapper msg-received" *ngIf="active.isTyping">
+          <div class="message-bubble typing-bubble">
+            <div class="typing-indicator">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= INPUT ================= -->
+      <div class="chat-input-area">
+
+        <input type="text"
+               class="message-input"
+               placeholder="Type a message..."
+               [ngModel]="newMessage()"
+               (ngModelChange)="newMessage.set($event)"
+               (keyup.enter)="sendMessage()">
+
+        <button class="icon-btn text-primary" *ngIf="!newMessage()">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+
+        <button class="send-btn" *ngIf="newMessage()" (click)="sendMessage()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- NO CHAT SELECTED -->
+    <ng-template #noChat>
+      <div class="chat-main empty-state">
+        <p class="text-center text-muted mt-5">
+          Select a chat to start messaging
+        </p>
+      </div>
+    </ng-template>
+
+  </div>
+</div>

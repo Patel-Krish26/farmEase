@@ -1,0 +1,203 @@
+<div *ngIf="currentUser()" class="profile-page mesh-bg">
+  <div class="profile-container">
+
+    <!-- Profile Hero Card -->
+    <div class="profile-hero-card anim-fade-up">
+      <div class="profile-banner"></div>
+      <div class="profile-hero-body">
+        <div class="profile-avatar-wrap">
+          <div class="avatar-ring-outer"></div>
+
+          <img [src]="'https://ui-avatars.com/api/?name=' + (currentUser()?.fullName || 'User') + '&background=16a34a&color=fff&size=120&bold=true'"
+               [alt]="currentUser()?.fullName"
+               class="profile-avatar-img">
+
+          <div class="avatar-verified">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+
+        <div class="profile-identity">
+          <h1 class="profile-name">
+            {{ currentUser()?.fullName | titlecase }}
+          </h1>
+
+          <div class="profile-role-row">
+            <span class="badge-role">{{ currentUser()?.role }}</span>
+
+            <span class="profile-verified">
+              <i class="fa-solid fa-seedling me-1"></i>
+              Verified FarmEase Member
+            </span>
+          </div>
+        </div>
+
+        <button (click)="editProfile()" class="btn-glow profile-edit-btn">
+          <i class="fa-solid fa-user-pen me-2"></i>
+          Edit Profile
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Action Tiles -->
+    <div class="profile-tiles anim-fade-up delay-2" *ngIf="currentUser()?.role !== 'admin'">
+      <a class="profile-tile" routerLink="/Cart">
+        <div class="tile-icon amber"><i class="fa-solid fa-basket-shopping"></i></div>
+        <div class="tile-label">My Basket</div>
+        <div class="tile-sub">Active items for checkout</div>
+        <i class="fa-solid fa-arrow-right tile-arrow"></i>
+      </a>
+
+      <a class="profile-tile" routerLink="/Orders">
+        <div class="tile-icon blue"><i class="fa-solid fa-receipt"></i></div>
+        <div class="tile-label">Purchase History</div>
+        <div class="tile-sub">Track shipments & invoices</div>
+        <i class="fa-solid fa-arrow-right tile-arrow"></i>
+      </a>
+
+      <a class="profile-tile" routerLink="/WishlistComponent">
+        <div class="tile-icon red"><i class="fa-solid fa-heart-circle-check"></i></div>
+        <div class="tile-label">Saved Items</div>
+        <div class="tile-sub">Your favorite seeds & tools</div>
+        <i class="fa-solid fa-arrow-right tile-arrow"></i>
+      </a>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="profile-info-row anim-fade-up delay-3">
+
+      <div class="profile-info-card">
+        <div class="info-card-label">Communication</div>
+
+        <div class="info-row">
+          <div class="info-icon green"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="info-field-label">Email</div>
+            <div class="info-field-val">{{ currentUser()?.email }}</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon green"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <div class="info-field-label">Phone</div>
+            <div class="info-field-val">
+              {{ currentUser()?.phone || 'Not provided' }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-info-card">
+        <div class="info-card-label">Location & Logistics</div>
+
+        <div class="info-row">
+          <div class="info-icon amber"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <div class="info-field-label">Address</div>
+            <div class="info-field-val">
+              {{ currentUser()?.address || 'Not provided' }}
+            </div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon blue"><i class="fa-solid fa-calendar-check"></i></div>
+          <div>
+            <div class="info-field-label">Member Since</div>
+            <div class="info-field-val">
+              {{ currentUser()?.joinedDate || currentUser()?.birthDate || 'Not provided' }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="profile-footer-note">
+      <i class="fa-solid fa-copyright me-1"></i>
+      2026 FarmEase Tech • Helping India Grow Sustainably
+    </p>
+
+  </div>
+</div>
+
+<!-- Edit Profile Modal -->
+<div class="edit-modal-backdrop"
+     *ngIf="showEditModal() && currentUser()"
+     (click)="closeModal()">
+
+  <div class="edit-modal-card anim-slide-right"
+       (click)="$event.stopPropagation()">
+
+    <div class="edit-modal-header">
+      <div>
+        <div class="section-label">Account</div>
+        <h2 class="edit-modal-title">Edit Profile</h2>
+      </div>
+
+      <button class="edit-modal-close" (click)="closeModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="edit-avatar-row">
+      <img [src]="'https://ui-avatars.com/api/?name=' + (editForm.fullName || currentUser()?.fullName || 'User') + '&background=16a34a&color=fff&size=100&bold=true'"
+           class="edit-avatar-preview">
+
+      <div>
+        <div class="edit-avatar-name">
+          {{ (editForm.fullName || currentUser()?.fullName) | titlecase }}
+        </div>
+
+        <div class="edit-avatar-hint">
+          <i class="fa-solid fa-wand-magic-sparkles me-1"></i>
+          Avatar auto-generated from name
+        </div>
+      </div>
+    </div>
+
+    <div class="edit-form">
+
+      <div class="form-floating-dark">
+        <label>Full Name *</label>
+        <input type="text" [(ngModel)]="editForm.fullName" name="fullName">
+      </div>
+
+      <div class="form-floating-dark">
+        <label>Phone Number</label>
+        <input type="tel" [(ngModel)]="editForm.phone" name="phone">
+      </div>
+
+      <div class="form-floating-dark">
+        <label>Delivery Address</label>
+        <textarea [(ngModel)]="editForm.address" name="address"></textarea>
+      </div>
+
+      <div class="form-floating-dark">
+        <label>Date of Birth / Year Joined</label>
+        <input type="text" [(ngModel)]="editForm.dob" name="dob">
+      </div>
+
+      <div class="edit-error" *ngIf="saveError()">
+        {{ saveError() }}
+      </div>
+
+      <div class="edit-success" *ngIf="saveSuccess()">
+        Profile updated successfully!
+      </div>
+
+      <div class="edit-modal-actions">
+        <button type="button" (click)="closeModal()">Cancel</button>
+
+        <button type="button"
+                (click)="saveProfile()"
+                [disabled]="isSaving()">
+
+          {{ isSaving() ? 'Saving...' : 'Save Changes' }}
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

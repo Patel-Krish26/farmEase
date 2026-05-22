@@ -1,0 +1,62 @@
+<footer class="fe-footer" *ngIf="auth.isLoggedIn() && currentUser?.role !== 'admin'">
+  <div class="footer-glow-line"></div>
+  <div class="footer-container">
+
+    <div class="footer-grid">
+
+      <!-- Brand Column -->
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <div class="brand-icon"><i class="fa-solid fa-seedling"></i></div>
+          <span class="brand-text">farm<span class="brand-accent">Ease</span></span>
+        </div>
+        <p class="footer-tagline">
+          Farming, but make it smart. A modern agri-platform built for the next generation of farmers.
+        </p>
+        <div class="footer-chips">
+          <span class="chip">#AgriTech</span>
+          <span class="chip">#Marketplace</span>
+          <span class="chip">#SmartFarming</span>
+        </div>
+      </div>
+
+      <!-- Links Column -->
+      <div class="footer-links-col">
+        <div class="footer-col-title">Navigate</div>
+        <nav class="footer-nav">
+          <a routerLink="/" class="footer-link"><i class="fa-solid fa-house me-2"></i>Home</a>
+          <a routerLink="/Products" class="footer-link"><i class="fa-solid fa-wheat-awn me-2"></i>Products</a>
+          <a routerLink="/Cart" class="footer-link"><i class="fa-solid fa-cart-shopping me-2"></i>Market</a>
+          <a routerLink="/CustomerSupport" class="footer-link"><i class="fa-solid fa-microchip me-2"></i>Customer Support</a>
+          <a routerLink="/About" class="footer-link"><i class="fa-solid fa-book-open me-2"></i>About</a>
+        </nav>
+      </div>
+
+      <!-- Developer Column -->
+      <div class="footer-dev-col">
+        <div class="footer-col-title">Built By</div>
+        <div class="dev-card">
+          <div class="dev-name">Krish</div>
+          <div class="dev-desc">
+            Full-stack Developer • Angular • .NET • TypeScript<br>
+            Turning ideas into clean, scalable web experiences.
+          </div>
+          <div class="dev-socials">
+            <a href="#" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 <span>farmEase</span> • All Rights Reserved
+      </div>
+      <div class="footer-credits">
+        Designed & Built with <i class="fa-solid fa-mug-hot"></i> + <i class="fa-solid fa-heart"></i>
+      </div>
+    </div>
+  </div>
+</footer>

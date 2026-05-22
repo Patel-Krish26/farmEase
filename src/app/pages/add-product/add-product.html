@@ -1,0 +1,85 @@
+<div class="add-product-page mesh-bg">
+
+  <!-- Toast -->
+  <div class="toast-notification" [class.show]="showToast">
+    {{ toastMessage }}
+  </div>
+
+  <div class="add-product-container anim-fade-up">
+
+    <div class="header-section text-center">
+      <div class="section-label">Farmer Portal</div>
+      <h1 class="page-title">Sell Your <span>Harvest</span></h1>
+      <p class="page-desc">List your fresh produce, grains, or machinery directly to thousands of buyers instantly.</p>
+    </div>
+
+    <!-- Product Form -->
+    <form class="glass-form" (ngSubmit)="onSubmit()" #productForm="ngForm">
+      
+      <!-- Basic Details -->
+      <div class="form-section">
+        <h3 class="section-heading"><i class="fa-solid fa-box me-2"></i>Product Details</h3>
+        
+        <div class="form-floating-dark">
+          <label>Product Name <span class="text-danger">*</span></label>
+          <input type="text" [(ngModel)]="product.name" name="name" placeholder="e.g. Organic Tomatoes" required>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-floating-dark">
+            <label>Price (₹) <span class="text-danger">*</span></label>
+            <input type="number" [(ngModel)]="product.price" name="price" placeholder="45.00" min="1" required>
+          </div>
+          <div class="form-floating-dark">
+            <label>Available Quantity (kg / units) <span class="text-danger">*</span></label>
+            <input type="number" [(ngModel)]="product.quantity" name="quantity" placeholder="100" min="1" required>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-floating-dark">
+            <label>Category</label>
+            <select [(ngModel)]="product.category" name="category">
+              <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+            </select>
+          </div>
+          <div class="form-floating-dark">
+            <label>Quality / Condition</label>
+            <select [(ngModel)]="product.condition" name="condition">
+              <option *ngFor="let cond of conditions" [value]="cond">{{ cond }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Media & Description -->
+      <div class="form-section mt-4">
+        <h3 class="section-heading"><i class="fa-solid fa-image me-2"></i>Media & Description</h3>
+        
+        <div class="form-floating-dark">
+          <label>Product Image URL</label>
+          <input type="text" [(ngModel)]="product.image" name="image" placeholder="https://example.com/image.jpg">
+          <small class="form-text mt-1 text-muted">Leave blank to use a default image.</small>
+        </div>
+
+        <div class="image-preview" *ngIf="product.image">
+          <img [src]="product.image" alt="Preview Image" onerror="this.src='https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=200'">
+        </div>
+
+        <div class="form-floating-dark mt-3">
+          <label>Rich Description</label>
+          <textarea rows="4" [(ngModel)]="product.description" name="description" placeholder="Describe the freshness, origin, and quality of your product..."></textarea>
+        </div>
+      </div>
+
+      <!-- Submit Action -->
+      <div class="form-actions mt-5">
+        <button type="submit" class="btn-glow w-100 btn-lg" [disabled]="isLoading">
+          <span *ngIf="!isLoading"><i class="fa-solid fa-cloud-arrow-up me-2"></i>Publish Listing</span>
+          <span *ngIf="isLoading"><i class="fa-solid fa-circle-notch fa-spin me-2"></i>Publishing...</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

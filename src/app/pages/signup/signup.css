@@ -1,0 +1,638 @@
+/* ═══ SIGNUP SPECIFIC & SHARED OVERRIDES ═══ */
+@import '../login/login.css';
+
+/* =========================
+   GLOBAL RESPONSIVE RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
+   LAYOUT & PANEL
+========================= */
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  background: #060d09;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.auth-form-panel.signup-panel {
+  width: 100%;
+  max-width: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 197, 94, 0.2) transparent;
+}
+
+/* =========================
+   ROLE TABS
+========================= */
+.role-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+  .role-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+.role-tab {
+  flex: 1 1 0;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 8px;
+  border-radius: 10px;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid transparent;
+  text-align: center;
+  white-space: nowrap;
+}
+
+  .role-tab i {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    flex-shrink: 0;
+  }
+
+  .role-tab:hover {
+    color: #f0fdf4;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .role-tab.active {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  }
+
+    .role-tab.active i {
+      animation: bounce-y 0.4s ease;
+    }
+
+/* =========================
+   FORM ROWS
+========================= */
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+.form-floating-dark {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+}
+
+  .form-floating-dark label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-left: 4px;
+    word-break: break-word;
+  }
+
+  .form-floating-dark input,
+  .form-floating-dark textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    color: #f0fdf4 !important;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-floating-dark textarea {
+    resize: vertical;
+  }
+
+    .form-floating-dark input:focus,
+    .form-floating-dark textarea:focus {
+      border-color: #22c55e !important;
+      background: rgba(34, 197, 94, 0.04) !important;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+      outline: none;
+    }
+
+/* =========================
+   VALIDATION
+========================= */
+.error {
+  color: #f87171;
+  font-size: 0.75rem;
+  margin-left: 4px;
+  margin-top: 2px;
+  display: block;
+  word-break: break-word;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: #ef4444 !important;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+  border-color: #22c55e !important;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes bounce-y {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
+/* =========================
+   LARGE TABLETS
+========================= */
+@media (max-width: 992px) {
+  .auth-form-panel.signup-panel {
+    max-width: 100%;
+  }
+
+  .form-row-2 {
+    gap: 14px;
+  }
+}
+
+/* =========================
+   TABLETS
+========================= */
+@media (max-width: 768px) {
+  .auth-page {
+    flex-direction: column;
+    min-height: 100dvh;
+  }
+
+  .auth-form-panel.signup-panel {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 24px 20px;
+    border-radius: 0;
+  }
+
+  .role-tabs {
+    gap: 6px;
+    padding: 5px;
+  }
+
+  .role-tab {
+    padding: 10px 6px;
+    font-size: 0.72rem;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .form-floating-dark input,
+  .form-floating-dark textarea {
+    font-size: 0.88rem;
+    padding: 11px 14px !important;
+  }
+}
+
+/* =========================
+   MOBILE DEVICES
+========================= */
+@media (max-width: 540px) {
+  .auth-page {
+    padding: 0;
+  }
+
+  .auth-form-panel.signup-panel {
+    padding: 20px 16px;
+  }
+
+  .role-tabs {
+    margin-bottom: 20px;
+  }
+
+  .role-tab {
+    min-width: 80px;
+    font-size: 0.68rem;
+    padding: 10px 6px;
+  }
+
+    .role-tab i {
+      font-size: 1rem;
+    }
+
+  .form-floating-dark {
+    margin-bottom: 16px;
+  }
+
+    .form-floating-dark label {
+      font-size: 0.78rem;
+    }
+
+    .form-floating-dark input,
+    .form-floating-dark textarea {
+      padding: 10px 12px !important;
+      font-size: 0.85rem;
+      border-radius: 10px !important;
+    }
+
+  .error {
+    font-size: 0.72rem;
+  }
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+@media (max-width: 380px) {
+  .auth-form-panel.signup-panel {
+    padding: 18px 12px;
+  }
+
+  .role-tabs {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .role-tab {
+    min-width: 72px;
+    padding: 8px 4px;
+    font-size: 0.64rem;
+  }
+
+    .role-tab i {
+      font-size: 0.92rem;
+    }
+
+  .form-floating-dark input,
+  .form-floating-dark textarea {
+    padding: 9px 11px !important;
+    font-size: 0.82rem;
+  }
+
+  .form-floating-dark label {
+    font-size: 0.74rem;
+  }
+
+  .error {
+    font-size: 0.68rem;
+  }
+}
+
+/* ═══════════════════════════════════════
+   ULTRA RESPONSIVE FIXES — SIGNUP PAGE
+═══════════════════════════════════════ */
+
+/* Large Laptop */
+@media (max-width: 1200px) {
+
+  .auth-form-panel.signup-panel {
+    max-width: 560px;
+    padding: 32px 28px;
+  }
+
+  .role-tab {
+    font-size: 0.74rem;
+  }
+}
+
+
+/* Laptop / Tablet */
+@media (max-width: 992px) {
+
+  .auth-page {
+    flex-direction: column;
+  }
+
+  .auth-form-panel.signup-panel {
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 24px;
+  }
+
+  .form-row-2 {
+    gap: 14px;
+  }
+
+  .role-tabs {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+
+  .auth-page {
+    min-height: 100dvh;
+  }
+
+  .auth-form-panel.signup-panel {
+    padding: 26px 20px;
+    border-radius: 0;
+  }
+
+  .role-tabs {
+    gap: 6px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .role-tab {
+    min-width: 84px;
+    padding: 10px 8px;
+    font-size: 0.7rem;
+  }
+
+    .role-tab i {
+      font-size: 1rem;
+    }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-floating-dark {
+    margin-bottom: 16px;
+  }
+
+    .form-floating-dark label {
+      font-size: 0.76rem;
+    }
+
+    .form-floating-dark input,
+    .form-floating-dark textarea {
+      padding: 11px 14px !important;
+      font-size: 0.86rem;
+      border-radius: 10px !important;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 540px) {
+
+  .auth-page {
+    overflow-x: hidden;
+  }
+
+  .auth-form-panel.signup-panel {
+    width: 100%;
+    padding: 22px 16px;
+  }
+
+  .role-tabs {
+    gap: 5px;
+    padding: 4px;
+    border-radius: 12px;
+  }
+
+  .role-tab {
+    min-width: 76px;
+    padding: 9px 6px;
+    font-size: 0.66rem;
+    border-radius: 8px;
+  }
+
+    .role-tab i {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+  .form-floating-dark {
+    margin-bottom: 15px;
+  }
+
+    .form-floating-dark label {
+      margin-left: 2px;
+      font-size: 0.74rem;
+    }
+
+    .form-floating-dark input,
+    .form-floating-dark textarea {
+      font-size: 0.84rem;
+      padding: 10px 12px !important;
+      border-radius: 9px !important;
+    }
+
+  textarea {
+    min-height: 90px;
+  }
+
+  .error {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+}
+
+
+/* Small Mobile */
+@media (max-width: 420px) {
+
+  .auth-form-panel.signup-panel {
+    padding: 18px 14px;
+  }
+
+  .role-tabs {
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 18px;
+  }
+
+  .role-tab {
+    min-width: 68px;
+    padding: 8px 4px;
+    font-size: 0.62rem;
+  }
+
+    .role-tab i {
+      font-size: 0.88rem;
+    }
+
+  .form-floating-dark {
+    margin-bottom: 14px;
+  }
+
+    .form-floating-dark input,
+    .form-floating-dark textarea {
+      padding: 9px 11px !important;
+      font-size: 0.8rem;
+    }
+
+    .form-floating-dark label {
+      font-size: 0.7rem;
+    }
+
+  .error {
+    font-size: 0.66rem;
+  }
+}
+
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+
+  .auth-form-panel.signup-panel {
+    padding: 16px 10px;
+  }
+
+  .role-tabs {
+    border-radius: 10px;
+  }
+
+  .role-tab {
+    min-width: 60px;
+    font-size: 0.58rem;
+    padding: 7px 3px;
+  }
+
+    .role-tab i {
+      font-size: 0.8rem;
+    }
+
+  .form-floating-dark input,
+  .form-floating-dark textarea {
+    padding: 8px 10px !important;
+    font-size: 0.76rem;
+  }
+
+  .form-floating-dark label {
+    font-size: 0.66rem;
+  }
+
+  .error {
+    font-size: 0.62rem;
+  }
+}
+
+
+/* Landscape Phones */
+@media (max-height: 600px) and (orientation: landscape) {
+
+  .auth-page {
+    align-items: flex-start;
+  }
+
+  .auth-form-panel.signup-panel {
+    min-height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .role-tabs {
+    margin-bottom: 16px;
+  }
+
+  .form-floating-dark {
+    margin-bottom: 12px;
+  }
+}
+
+
+/* Prevent Overflow */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button,
+select {
+  max-width: 100%;
+}
+
+/* Smooth Scrolling */
+.auth-form-panel.signup-panel {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+

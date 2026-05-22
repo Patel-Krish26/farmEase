@@ -1,0 +1,118 @@
+<!-- Login Page — Animated Full Screen Split -->
+<div class="auth-page">
+
+  <!-- Left Panel: Visual with Particles -->
+  <div class="auth-visual">
+    <div class="auth-visual-bg">
+      <!-- Animated Particles -->
+      <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring orbit-ring-2"></div>
+    </div>
+
+    <div class="auth-visual-content">
+      <!-- Floating Cards -->
+      <div class="floating-cards">
+        <div class="feat-card anim-slide-left delay-1">
+          <div class="feat-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+          <div>
+            <div class="feat-title">Live Crop Data</div>
+            <div class="feat-sub">Real-time analytics</div>
+          </div>
+        </div>
+        <div class="feat-card anim-slide-left delay-3">
+          <div class="feat-icon danger"><i class="fa-solid fa-tractor"></i></div>
+          <div>
+            <div class="feat-title">Machinery Tracking</div>
+            <div class="feat-sub">Fleet management</div>
+          </div>
+        </div>
+        <div class="feat-card anim-slide-left delay-5">
+          <div class="feat-icon amber"><i class="fa-solid fa-chart-line"></i></div>
+          <div>
+            <div class="feat-title">Smart Analytics</div>
+            <div class="feat-sub">AI-powered insights</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="auth-visual-text anim-fade-up delay-4">
+        <div class="section-label" style="animation:none;opacity:1;">Welcome Back</div>
+        <h2 class="section-title" style="animation:none;opacity:1;font-size:2.2rem;color:#f0fdf4;">
+          Continue Your<br><span>Farming Journey</span>
+        </h2>
+        <p style="color:rgba(240,253,244,0.6);margin-top:16px;line-height:1.8;font-size:0.95rem;">
+          Real-time analytics, inventory control, and smart farming tools — all in one platform.
+        </p>
+
+        <!-- Stats -->
+        <div class="auth-stats anim-fade-up delay-6">
+          <div class="auth-stat"><div class="auth-stat-n">2.4K+</div><div class="auth-stat-l">Farmers</div></div>
+          <div class="auth-stat-divider"></div>
+          <div class="auth-stat"><div class="auth-stat-n">₹12Cr</div><div class="auth-stat-l">Traded</div></div>
+          <div class="auth-stat-divider"></div>
+          <div class="auth-stat"><div class="auth-stat-n">98%</div><div class="auth-stat-l">Satisfaction</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Panel: Form -->
+  <div class="auth-form-panel">
+    <div class="auth-form-card anim-slide-right">
+
+      <!-- Header -->
+      <div class="auth-form-header anim-fade-down delay-1">
+        <div class="brand-icon" style="animation:none;"><i class="fa-solid fa-seedling"></i></div>
+        <div class="auth-form-badge">Secure Login</div>
+      </div>
+
+      <h1 class="auth-title anim-fade-up delay-2">Sign In</h1>
+      <p class="auth-sub anim-fade-up delay-3">Enter your credentials to access your farm dashboard.</p>
+
+      <!-- Form -->
+      <form (submit)="$event.preventDefault()">
+
+        <div class="form-floating-dark delay-4">
+          <label>Email Address</label>
+          <input type="email" #email placeholder="you@example.com">
+        </div>
+
+        <div class="form-floating-dark delay-5">
+          <label>Password</label>
+          <input type="password" #password placeholder="••••••••">
+        </div>
+
+        <div class="auth-form-extras anim-fade-up delay-5">
+          <label class="remember-label">
+            <input type="checkbox" class="remember-check"> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" id="loginBtn" class="btn-glow w-100 auth-submit anim-fade-up delay-6"
+                (click)="login(email.value, password.value)">
+          <i class="fa-solid fa-right-to-bracket"></i>Sign In to FarmEase
+        </button>
+
+        <div class="auth-divider anim-fade-in delay-7"><span>or</span></div>
+
+        <p class="auth-switch anim-fade-up delay-7">
+          New to FarmEase? <a routerLink="/Signup">Create an account <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

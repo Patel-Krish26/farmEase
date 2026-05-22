@@ -1,0 +1,206 @@
+<nav class="fe-navbar" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+
+    <!-- Brand -->
+    <a class="nav-brand" routerLink="/">
+      <div class="brand-icon">
+        <i class="fa-solid fa-seedling"></i>
+      </div>
+      <span class="brand-text">farm<span class="brand-accent">Ease</span></span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links">
+      <li><a routerLink="/HomePage" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link-item">Home</a></li>
+      <li><a routerLink="/About" routerLinkActive="active" class="nav-link-item">About</a></li>
+      <li *ngIf="auth.isLoggedIn()"><a routerLink="/Products" routerLinkActive="active" class="nav-link-item">Products</a></li>
+      <li *ngIf="auth.isLoggedIn() && currentUser?.role === 'admin'">
+        <a routerLink="/admin/Admin" routerLinkActive="active" class="nav-link-item">
+          <i class="fa-solid fa-chart-line me-1"></i>Dashboard
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right Actions -->
+    <div class="nav-actions">
+
+      <!-- Guest -->
+      <ng-container *ngIf="!auth.isLoggedIn()">
+        <button class="btn-outline-glow btn-sm-nav" routerLink="/Signup">Register</button>
+        <button class="btn-glow btn-sm-nav" routerLink="/Login">Sign In</button>
+      </ng-container>
+
+      <!-- Logged In -->
+      <ng-container *ngIf="auth.isLoggedIn()">
+        <button *ngIf="currentUser?.role !== 'admin'" class="nav-icon-btn" routerLink="/WishlistComponent" title="Wishlist">
+          <i class="fa-solid fa-heart"></i>
+          <span class="nav-badge" *ngIf="wishCount() > 0">{{ wishCount() }}</span>
+        </button>
+        <button *ngIf="currentUser?.role !== 'admin'" class="nav-icon-btn" routerLink="/Cart" title="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="nav-badge" *ngIf="cartCount() > 0">{{ cartCount() }}</span>
+        </button>
+
+        <button class="user-avatar-btn"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sideDrawer"
+                aria-controls="sideDrawer">
+          <img [src]="'https://ui-avatars.com/api/?name=' + (currentUser?.fullName || 'U') + '&background=16a34a&color=fff&bold=true'"
+               [alt]="currentUser?.fullName" />
+          <span class="avatar-ring"></span>
+        </button>
+      </ng-container>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-toggle"
+              [class.active]="mobileMenuOpen"
+              (click)="toggleMobileMenu($event)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-collapse"
+       [class.open]="mobileMenuOpen">
+
+    <div class="mobile-nav">
+
+      <a routerLink="/HomePage"
+         class="mob-link"
+         (click)="closeMobileMenu()">
+        Home
+      </a>
+
+      <a routerLink="/About"
+         class="mob-link"
+         (click)="closeMobileMenu()">
+        About
+      </a>
+
+      <a *ngIf="auth.isLoggedIn()"
+         routerLink="/Products"
+         class="mob-link"
+         (click)="closeMobileMenu()">
+        Products
+      </a>
+
+      <a *ngIf="auth.isLoggedIn() && currentUser?.role === 'farmer'"
+         routerLink="/AddProduct"
+         class="mob-link"
+         (click)="closeMobileMenu()">
+        Add Product
+      </a>
+
+      <a *ngIf="auth.isLoggedIn()"
+         routerLink="/CustomerSupport"
+         class="mob-link"
+         (click)="closeMobileMenu()">
+        Customer Support
+      </a>
+
+      <ng-container *ngIf="!auth.isLoggedIn()">
+
+        <a routerLink="/Login"
+           class="mob-link"
+           (click)="closeMobileMenu()">
+          Sign In
+        </a>
+
+        <a routerLink="/Signup"
+           class="mob-link mob-link-green"
+           (click)="closeMobileMenu()">
+          Register
+        </a>
+
+      </ng-container>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══ SIDE DRAWER ═══ -->
+<div class="offcanvas offcanvas-end fe-drawer" id="sideDrawer" tabindex="-1">
+
+  <!-- Drawer Header -->
+  <div class="drawer-header">
+    <div class="drawer-brand">
+      <div class="brand-icon-sm"><i class="fa-solid fa-seedling"></i></div>
+      <div>
+        <div class="drawer-brand-name">farm<span>Ease</span></div>
+        <div class="drawer-brand-sub">Control Panel</div>
+      </div>
+    </div>
+    <button type="button" class="drawer-close" data-bs-dismiss="offcanvas">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <div class="drawer-body">
+
+    <!-- User Profile Card -->
+    <div class="drawer-profile">
+      <img [src]="currentUser?.fullName
+        ? 'https://ui-avatars.com/api/?name=' + currentUser.fullName + '&background=16a34a&color=fff&bold=true&size=80'
+        : 'https://ui-avatars.com/api/?name=Guest&background=374151&color=fff&size=80'"
+           class="drawer-avatar" alt="Profile" />
+      <div class="drawer-profile-info">
+        <div class="drawer-name">{{ (currentUser?.fullName || 'FarmEase User') | titlecase }}</div>
+        <div class="drawer-email">{{ currentUser?.email || 'guest@farmease.in' }}</div>
+      </div>
+      <span class="badge-role">{{ currentUser?.role || 'guest' }}</span>
+    </div>
+
+    <!-- Profile Actions -->
+    <div class="drawer-actions">
+      <button class="btn-glass" routerLink="/Profile" data-bs-dismiss="offcanvas">
+        <i class="fa-solid fa-user"></i>
+        <span>Profile</span>
+      </button>
+      <button class="btn-danger-glass" (click)="logout()" data-bs-dismiss="offcanvas">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Sign Out</span>
+      </button>
+    </div>
+
+    <!-- Menu Items -->
+    <div *ngIf="auth.isLoggedIn() && currentUser?.role !== 'admin'" class="drawer-menu">
+      <div class="drawer-section-label">Field Management</div>
+
+      <!-- Farmer Only: Add Product -->
+      <a *ngIf="currentUser?.role === 'farmer'" routerLink="/AddProduct" class="drawer-item" data-bs-dismiss="offcanvas">
+        <div class="drawer-item-icon"><i class="fa-solid fa-plus"></i></div>
+        <span>Add Listing / Product</span>
+        <i class="fa-solid fa-chevron-right drawer-arrow"></i>
+      </a>
+      <a *ngIf="auth.isLoggedIn() && currentUser?.role !== 'admin'" routerLink="/CustomerSupport" class="drawer-item" data-bs-dismiss="offcanvas">
+        <div class="drawer-item-icon"><i class="fa-solid fa-headset"></i></div>
+        <span>Customer Support</span>
+        <i class="fa-solid fa-chevron-right drawer-arrow"></i>
+      </a>
+
+      <!-- Live Chat / Support Inbox -->
+      <a routerLink="/Chat" class="drawer-item" data-bs-dismiss="offcanvas">
+        <div class="drawer-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <span>{{ currentUser?.role === 'admin' ? 'Support Inbox' : 'Live Chat' }}</span>
+        <i class="fa-solid fa-chevron-right drawer-arrow"></i>
+      </a>
+
+      <a routerLink="/News" class="drawer-item" data-bs-dismiss="offcanvas">
+        <div class="drawer-item-icon"><i class="fa-solid fa-newspaper"></i></div>
+        <span>Agri News</span>
+        <i class="fa-solid fa-chevron-right drawer-arrow"></i>
+      </a>
+      <a routerLink="/DataComponent" class="drawer-item" data-bs-dismiss="offcanvas">
+        <div class="drawer-item-icon"><i class="fa-solid fa-database"></i></div>
+        <span>Cold Storage Data</span>
+        <i class="fa-solid fa-chevron-right drawer-arrow"></i>
+      </a>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://api.data.gov.in",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

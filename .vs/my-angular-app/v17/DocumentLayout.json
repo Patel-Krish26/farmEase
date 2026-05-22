@@ -1,0 +1,755 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\products\\products.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\products\\products.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\profile\\profile.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\profile\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\core\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\orders\\orders.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\orders\\orders.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\services\\data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\admin\\admin.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\admin\\admin.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\about\\about.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\about\\about.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\interceptors\\auth.interceptor.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\core\\interceptors\\auth.interceptor.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\about-us.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\Home\\about-us.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\profile\\profile.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\about\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\about\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\footer\\footer.component\\footer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\shared\\footer\\footer.component\\footer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\footer\\footer.component\\footer.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\shared\\footer\\footer.component\\footer.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\hero-section.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\Home\\hero-section.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\services.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\Home\\services.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\faq.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\Home\\faq.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\proxy.conf.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:proxy.conf.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\shared\\navbar\\nav.component\\nav.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\shared\\navbar\\nav.component\\nav.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\home-page\\home-page.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\Home\\home-page\\home-page.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\home-page\\home-page.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\Home\\home-page\\home-page.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\guards\\auth.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\core\\guards\\auth.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\services\\api-auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\api-auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\shared\\navbar\\nav.component\\nav.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\data-cs\\data-cs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\data-cs\\data-cs.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\data-cs\\data-cs.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\data-cs\\data-cs.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\contact\\contact.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\contact\\contact.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\Components\\card\\card.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\Components\\card\\card.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\Components\\card\\card.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\Components\\card\\card.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\contact\\contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\contact\\contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\signup\\signup.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\signup\\signup.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 245,
+          "SelectedChildIndex": 29,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:23:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:24:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:25:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:27:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:26:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:36:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:37:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "orders.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\orders\\orders.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\orders\\orders.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\orders\\orders.ts",
+              "RelativeToolTip": "src\\app\\pages\\orders\\orders.ts",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "about.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\about\\about.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\about\\about.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\about\\about.ts",
+              "RelativeToolTip": "src\\app\\pages\\about\\about.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "admin.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\admin\\admin.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\admin\\admin.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\admin\\admin.ts",
+              "RelativeToolTip": "src\\app\\pages\\admin\\admin.ts",
+              "ViewState": "AQIAADsAAAAAAAAAAAAkwEoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "products.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\products\\products.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\products\\products.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\products\\products.ts",
+              "RelativeToolTip": "src\\app\\pages\\products\\products.ts",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAACAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "profile.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\profile\\profile.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.ts",
+              "RelativeToolTip": "src\\app\\pages\\profile\\profile.ts",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAowFsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "profile.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.html",
+              "RelativeDocumentMoniker": "src\\app\\pages\\profile\\profile.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.html",
+              "RelativeToolTip": "src\\app\\pages\\profile\\profile.html",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAiwJ8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "auth.service.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\services\\auth.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\services\\auth.service.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\services\\auth.service.ts",
+              "RelativeToolTip": "src\\app\\core\\services\\auth.service.ts",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "auth.interceptor.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\interceptors\\auth.interceptor.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\interceptors\\auth.interceptor.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\interceptors\\auth.interceptor.ts",
+              "RelativeToolTip": "src\\app\\core\\interceptors\\auth.interceptor.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "about-us.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\about-us.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\Home\\about-us.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\about-us.ts",
+              "RelativeToolTip": "src\\app\\pages\\Home\\about-us.ts",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAAAgAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "data.service.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\services\\data.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\data.service.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\services\\data.service.ts",
+              "RelativeToolTip": "src\\app\\services\\data.service.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "profile.spec.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\profile\\profile.spec.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\profile\\profile.spec.ts",
+              "RelativeToolTip": "src\\app\\pages\\profile\\profile.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "about.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\about\\about.html",
+              "RelativeDocumentMoniker": "src\\app\\pages\\about\\about.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\about\\about.html",
+              "RelativeToolTip": "src\\app\\pages\\about\\about.html",
+              "ViewState": "AQIAABIAAAAAAAAAAAAjwBsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "footer.component.css",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\footer\\footer.component\\footer.component.css",
+              "RelativeDocumentMoniker": "src\\app\\shared\\footer\\footer.component\\footer.component.css",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\footer\\footer.component\\footer.component.css",
+              "RelativeToolTip": "src\\app\\shared\\footer\\footer.component\\footer.component.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-13T12:35:57.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "hero-section.component.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\hero-section.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\Home\\hero-section.component.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\hero-section.component.ts",
+              "RelativeToolTip": "src\\app\\pages\\Home\\hero-section.component.ts",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAACUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "nav.component.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\shared\\navbar\\nav.component\\nav.component.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.ts",
+              "RelativeToolTip": "src\\app\\shared\\navbar\\nav.component\\nav.component.ts",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "proxy.conf.json",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\proxy.conf.json",
+              "RelativeDocumentMoniker": "proxy.conf.json",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\proxy.conf.json",
+              "RelativeToolTip": "proxy.conf.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-13T12:35:57.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "main.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\main.ts",
+              "RelativeDocumentMoniker": "src\\main.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\main.ts",
+              "RelativeToolTip": "src\\main.ts",
+              "ViewState": "AQIAADUAAAAAAAAAAAAQwD0AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "footer.component.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\footer\\footer.component\\footer.component.html",
+              "RelativeDocumentMoniker": "src\\app\\shared\\footer\\footer.component\\footer.component.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\footer\\footer.component\\footer.component.html",
+              "RelativeToolTip": "src\\app\\shared\\footer\\footer.component\\footer.component.html",
+              "ViewState": "AQIAAB8AAAAAAAAAAIBJwC4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "services.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\services.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\Home\\services.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\services.ts",
+              "RelativeToolTip": "src\\app\\pages\\Home\\services.ts",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "faq.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\faq.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\Home\\faq.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\faq.ts",
+              "RelativeToolTip": "src\\app\\pages\\Home\\faq.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "home-page.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\home-page\\home-page.html",
+              "RelativeDocumentMoniker": "src\\app\\pages\\Home\\home-page\\home-page.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\home-page\\home-page.html",
+              "RelativeToolTip": "src\\app\\pages\\Home\\home-page\\home-page.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "home-page.css",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\home-page\\home-page.css",
+              "RelativeDocumentMoniker": "src\\app\\pages\\Home\\home-page\\home-page.css",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\Home\\home-page\\home-page.css",
+              "RelativeToolTip": "src\\app\\pages\\Home\\home-page\\home-page.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-13T12:35:57.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "auth.guard.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\guards\\auth.guard.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\guards\\auth.guard.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\core\\guards\\auth.guard.ts",
+              "RelativeToolTip": "src\\app\\core\\guards\\auth.guard.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "api-auth.service.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\services\\api-auth.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\api-auth.service.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\services\\api-auth.service.ts",
+              "RelativeToolTip": "src\\app\\services\\api-auth.service.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "nav.component.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.html",
+              "RelativeDocumentMoniker": "src\\app\\shared\\navbar\\nav.component\\nav.component.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.html",
+              "RelativeToolTip": "src\\app\\shared\\navbar\\nav.component\\nav.component.html",
+              "ViewState": "AQIAACwAAAAAAAAAAIBJwEAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "nav.component.css",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.css",
+              "RelativeDocumentMoniker": "src\\app\\shared\\navbar\\nav.component\\nav.component.css",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\shared\\navbar\\nav.component\\nav.component.css",
+              "RelativeToolTip": "src\\app\\shared\\navbar\\nav.component\\nav.component.css",
+              "ViewState": "AQIAAMwAAAAAAAAAAAAWwN8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-13T12:35:57.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "data-cs.spec.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\data-cs\\data-cs.spec.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.spec.ts",
+              "RelativeToolTip": "src\\app\\pages\\data-cs\\data-cs.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "data-cs.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.html",
+              "RelativeDocumentMoniker": "src\\app\\pages\\data-cs\\data-cs.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.html",
+              "RelativeToolTip": "src\\app\\pages\\data-cs\\data-cs.html",
+              "ViewState": "AQIAABgAAAAAAAAAAIBJwCUAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "data-cs.css",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.css",
+              "RelativeDocumentMoniker": "src\\app\\pages\\data-cs\\data-cs.css",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.css",
+              "RelativeToolTip": "src\\app\\pages\\data-cs\\data-cs.css",
+              "ViewState": "AQIAACYAAAAAAAAAAAAmwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-13T12:35:57.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "angular.json",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\angular.json",
+              "RelativeDocumentMoniker": "angular.json",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\angular.json",
+              "RelativeToolTip": "angular.json",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwFUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-13T12:35:57.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "data-cs.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\data-cs\\data-cs.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\data-cs\\data-cs.ts",
+              "RelativeToolTip": "src\\app\\pages\\data-cs\\data-cs.ts",
+              "ViewState": "AQIAABEAAAAAAAAAAAAmwDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "card.css",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\Components\\card\\card.css",
+              "RelativeDocumentMoniker": "src\\app\\Components\\card\\card.css",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\Components\\card\\card.css",
+              "RelativeToolTip": "src\\app\\Components\\card\\card.css",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-13T12:35:57.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "card.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\Components\\card\\card.html",
+              "RelativeDocumentMoniker": "src\\app\\Components\\card\\card.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\Components\\card\\card.html",
+              "RelativeToolTip": "src\\app\\Components\\card\\card.html",
+              "ViewState": "AQIAABYAAAAAAAAAAABhwCgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "contact.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\contact\\contact.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\contact\\contact.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\contact\\contact.ts",
+              "RelativeToolTip": "src\\app\\pages\\contact\\contact.ts",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwA4AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "contact.html",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\contact\\contact.html",
+              "RelativeDocumentMoniker": "src\\app\\pages\\contact\\contact.html",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\contact\\contact.html",
+              "RelativeToolTip": "src\\app\\pages\\contact\\contact.html",
+              "ViewState": "AQIAAAgAAAAAAAAAACBjwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-13T12:35:57.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\tsconfig.json",
+              "RelativeDocumentMoniker": "tsconfig.json",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\tsconfig.json",
+              "RelativeToolTip": "tsconfig.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-13T12:35:57.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "signup.ts",
+              "DocumentMoniker": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\signup\\signup.ts",
+              "RelativeDocumentMoniker": "src\\app\\pages\\signup\\signup.ts",
+              "ToolTip": "C:\\Users\\pcit100\\Desktop\\farmEase-main\\my-angular-app\\src\\app\\pages\\signup\\signup.ts",
+              "RelativeToolTip": "src\\app\\pages\\signup\\signup.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-13T12:35:57.807Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 155,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:39:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:42:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:41:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:40:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:38:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:28:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:29:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:32:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

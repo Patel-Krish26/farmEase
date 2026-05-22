@@ -1,0 +1,199 @@
+<!-- Toast Notification -->
+<div class="toast-notification" [class.show]="showToast()">
+    {{ toastMessage() }}
+</div>
+
+<!-- Products Page -->
+<div class="products-page mesh-bg">
+
+    <!-- Hero -->
+    <div class="products-hero">
+        <div class="products-hero-content anim-fade-up">
+            <div class="section-label">Marketplace</div>
+            <h1 class="section-title">Farm <span>Store</span></h1>
+            <p class="hero-sub">Premium seeds, organic fertilizers, and smart machinery delivered to your field.</p>
+
+            <div class="hero-meta" *ngIf="!isLoading()">
+                <span class="hero-count">
+                    <i class="fa-solid fa-box-open me-2"></i>{{ products().length }} items available
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products-body">
+
+        <!-- Loading -->
+        <div *ngIf="isLoading()" class="loading-state anim-fade-in">
+            <div class="loader-ring"></div>
+            <p>Gathering the best supplies...</p>
+        </div>
+
+        <!-- Grid -->
+        <div *ngIf="!isLoading() && products().length > 0" class="products-grid">
+            <div class="product-card anim-fade-up"
+                 *ngFor="let product of products(); let i = index"
+                 [style.animation-delay]="(i * 0.05) + 's'">
+
+                <div class="product-img-wrap">
+                    <img [src]="product.imageUrl || 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500'"
+                         [alt]="product.title"
+                         class="product-img">
+
+                    <div class="product-label" [class.out-of-stock]="!product.inStock">
+                        {{ product.label }}
+                    </div>
+
+                    <button class="wishlist-fab"
+                            (click)="toggleWishlist(product)"
+                            [class.wishlisted]="isInWishlist(product.id)">
+                        <i [class]="isInWishlist(product.id) ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"></i>
+                    </button>
+                </div>
+
+                <div class="product-body">
+                    <div class="product-cat">{{ product.subtitle }}</div>
+                    <h3 class="product-name">{{ product.title }}</h3>
+                    <p class="product-desc">{{ product.description }}</p>
+
+                    <div class="product-footer">
+                        <div class="product-price">{{ product.metaText }}</div>
+                    </div>
+
+                    <div class="product-actions">
+                      <button class="btn-glow product-add-btn"
+                              *ngIf ="!auth.isAdmin()"
+                              (click)="addToCart(product)"
+                              [disabled]="!product.inStock">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+
+                      </button>
+
+                        <button class="product-detail-btn" (click)="viewProduct(product)">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div *ngIf="!isLoading() && products().length === 0" class="empty-products anim-fade-in">
+            <i class="fa-solid fa-seedling empty-icon"></i>
+            <h3>The barn is empty!</h3>
+            <p>No products found. Please check back soon.</p>
+
+            <button class="btn-glow"
+                    style="padding:12px 28px;border-radius:50px;margin-top:16px;"
+                    (click)="refreshProducts()">
+                <i class="fa-solid fa-arrows-rotate me-2"></i>Refresh Store
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- PRODUCT DETAIL MODAL -->
+<div class="modal-backdrop" *ngIf="selectedProduct()" (click)="closeModal()">
+    <div class="product-modal anim-slide-right" (click)="$event.stopPropagation()">
+
+        <button class="modal-close-btn" (click)="closeModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-img-wrap">
+            <img [src]="selectedProduct()?.imageUrl || 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600'"
+                 [alt]="selectedProduct()?.title"
+                 class="modal-img">
+
+            <div class="modal-label" [class.out-of-stock]="!selectedProduct()?.inStock">
+                {{ selectedProduct()?.label }}
+            </div>
+        </div>
+
+        <div class="modal-body">
+            <div class="modal-cat">{{ selectedProduct()?.subtitle }}</div>
+            <h2 class="modal-name">{{ selectedProduct()?.title }}</h2>
+            <p class="modal-desc">{{ selectedProduct()?.description }}</p>
+            <div class="modal-price">{{ selectedProduct()?.metaText }}</div>
+
+            <div class="modal-meta-row">
+                <div class="modal-meta-item">
+                    <div class="meta-label">Stock</div>
+                    <div class="meta-val"
+                         [style.color]="selectedProduct()?.inStock ? '#22c55e' : '#ef4444'">
+                        {{ selectedProduct()?.inStock ? '✓ Available' : '✗ Out of stock' }}
+                    </div>
+                </div>
+
+                <div class="modal-meta-item">
+                    <div class="meta-label">Units Available</div>
+                    <div class="meta-val">{{ selectedProduct()?.quantity }}</div>
+                </div>
+
+                <div class="modal-meta-item">
+                    <div class="meta-label">Category</div>
+                    <div class="meta-val">{{ selectedProduct()?.subtitle }}</div>
+                </div>
+            </div>
+
+            <div class="modal-actions" *ngIf ="!auth.isAdmin()">
+
+                <div class="qty-control modal-qty" *ngIf="selectedProduct()?.inStock">
+                    <button class="qty-btn"
+                            (click)="selectedQty.set(selectedQty() > 1 ? selectedQty() - 1 : 1)">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <span class="qty-val">{{ selectedQty() }}</span>
+
+                    <button class="qty-btn"
+                            (click)="selectedQty.set(selectedQty() + 1)">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <button class="btn-glow modal-cart-btn"
+                        (click)="addModalToCart()"
+                        [disabled]="!selectedProduct()?.inStock">
+                    <i class="fa-solid fa-cart-plus me-2"></i>
+                    {{ selectedProduct()?.inStock ? 'Add to Cart' : 'Out of Stock' }}
+                </button>
+
+                <button class="modal-wish-btn"
+                        (click)="toggleWishlist(selectedProduct())"
+                        [class.wishlisted]="isInWishlist(selectedProduct()?.id)">
+                        <i [class]="isInWishlist(selectedProduct()?.id) ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"></i>
+                </button>
+            </div>
+            
+            <div class="modal-contact-section">
+                <div class="contact-label">
+                    <i class="fa-solid fa-headset me-2"></i>Connect with Seller
+                </div>
+
+                <div class="contact-btn-row">
+                    <a [href]="getWhatsAppLink(selectedProduct())" target="_blank" class="contact-btn btn-wa">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a [href]="getPhoneLink()" class="contact-btn btn-call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+
+                    <a [href]="getTelegramSupport()" class="contact-btn btn-tele">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+                    <a [href]="getMailLink(selectedProduct())" class="contact-btn btn-mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
